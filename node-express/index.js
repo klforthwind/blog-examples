@@ -17,12 +17,12 @@ app.post("/wolf", (req, res) => {
 });
 
 // Get Request With Query
-app.get("/wolf", (req, res) => {
+app.get("/monkey", (req, res) => {
     res.send(`This is an ${req.query.name} Api!`);
 });
 
 // Get Request With Query
-app.get("/dragon:name", (req, res) => {
+app.get("/cat:name", (req, res) => {
     res.send(`This is an ${req.param.name} Api!`);
 });
 
