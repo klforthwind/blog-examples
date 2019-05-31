@@ -12,7 +12,7 @@ app.post("/dragon", (req, res) => {
 });
 
 // Any Request
-app.post("/wolf", (req, res) => {
+app.use("/wolf", (req, res) => {
     res.send(`You have reached the wolf`);
 });
 
@@ -22,8 +22,13 @@ app.get("/monkey", (req, res) => {
 });
 
 // Get Request With Query
-app.get("/cat:name", (req, res) => {
-    res.send(`This is an ${req.param.name} Api!`);
+app.get("/cat/:name", (req, res) => {
+    res.send(`This is an ${req.params.name} Api!`);
+});
+
+// Get Request With Query
+app.get("/lemur:name", (req, res) => {
+    res.send(`This is an ${req.params.name} Api!`);
 });
 
 app.listen(4000);
